@@ -11,7 +11,7 @@ def do_upload():
     instrumental = request.files.get('instrumental')
     orig_name, orig_ext = os.path.splitext(original.filename)
     instr_name, instr_ext = os.path.splitext(instrumental.filename)
-    save_path = '/home/marlon/code/'
+    save_path = '../'
     original.save(save_path)
     instrumental.save(save_path)
     return (template('print', text='OK'))
